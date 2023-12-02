@@ -2,7 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import { Test } from "./ImportExport";
 import DefaultTest from './ImportExport';
-import Board from './components/board';
+import Game from './components/game';
 
 function App() {
   return (
@@ -23,7 +23,7 @@ function App() {
         <p>
           {/* <Test />
           <DefaultTest /> */}
-          <Board />
+          <Game />
         </p>
       </header>
     </div>

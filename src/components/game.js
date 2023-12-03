@@ -32,6 +32,11 @@ function Game() {
     setCurrentMove(currentMove + 1);
   }
 
+  function reset(){
+    setCurrentMove(0);
+    setHistory([Array(9).fill(null)]);
+  }
+
   const moves = history.map((squares, move) => {
     let description;
     if (move > 0) {
@@ -54,12 +59,15 @@ function Game() {
       <div className="game-info">
         <ol>{moves}</ol>
       </div>
-      <div className="undo-redo">
+      <div className="undo-redo-reset">
         <button className="undo" onClick={() => undo()}>
           Undo
         </button>
         <button className="redo" onClick={() => redo()}>
           Redo
+        </button>
+        <button className="reset" onClick={() => reset()}>
+          Reset
         </button>
       </div>
     </div>
